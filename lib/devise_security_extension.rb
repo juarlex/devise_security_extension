@@ -1,5 +1,5 @@
 #require 'rails/all'
-require 'active_record/connection_adapters/abstract/schema_definitions'
+require 'mongoid'
 require 'active_support/core_ext/integer'
 require 'active_support/ordered_hash'
 require 'active_support/concern'
@@ -91,6 +91,6 @@ Devise.add_module :security_questionable, :model => 'devise_security_extension/m
 # requires
 require 'devise_security_extension/routes'
 require 'devise_security_extension/rails'
-require 'devise_security_extension/orm/active_record'
+require 'devise_security_extension/orm/mongoid'
 require 'devise_security_extension/models/old_password'
 require 'devise_security_extension/models/security_question'
