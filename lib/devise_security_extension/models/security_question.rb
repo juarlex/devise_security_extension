@@ -8,4 +8,6 @@ class SecurityQuestion
   validates :locale, :name, :presence => true
 
   attr_accessible :locale, :name
+
+  index({:created_at => 1}, {:background => true})
 end

@@ -13,4 +13,5 @@ class OldPassword
   belongs_to :password_archivable, :polymorphic => true
   attr_accessible :encrypted_password, :password_salt
 
+  index({:created_at => 1}, {:background => true})
 end
